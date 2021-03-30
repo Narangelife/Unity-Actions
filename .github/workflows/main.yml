@@ -18,7 +18,7 @@ jobs:
     - name: Unity Build
       shell: cmd
       run: |
-        "C:\Program Files\Unity\Hub\Editor\2020.3.1f1\Editor\Unity.exe" -quit -batchmode -projectPath . -executeMethod BuildScript.Build -buildTarget Standalone64 -setDefaultPlatformTextureFormat astc -nographics -logFile -
+        "C:\Program Files\Unity\Hub\Editor\2020.3.1f1\Editor\Unity.exe" -quit -batchmode -projectPath . -executeMethod BuildScript.Build -buildTarget StandaloneWindows64 -setDefaultPlatformTextureFormat astc -nographics -logFile -
 
     - name: Release
       run: Copy-Item Build\Application.apk ActionAPK\Application${{ github.run_number }}.apk
